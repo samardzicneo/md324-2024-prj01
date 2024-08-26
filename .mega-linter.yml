@@ -15,11 +15,10 @@ APPLY_FIXES: all
 # ENABLE_LINTERS:
 
 DISABLE:
-  - COPYPASTE # Comment to enable checks of excessive copy-pastes
+  - COPYPASTE
   - PHP
   - SPELL
   - EDITORCONFIG
-  # - SPELL # Uncomment to disable checks of spelling mistakes
 
 SHOW_ELAPSED_TIME: true
 

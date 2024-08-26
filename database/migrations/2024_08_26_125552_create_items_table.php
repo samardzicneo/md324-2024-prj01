@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->boolean('done')->default('false');
-            #$table->foreignId('project_id')->constrained()->cascadeOnDelete();
+            //$table->foreignId('project_id')->constrained()->cascadeOnDelete();
         });
     }
 

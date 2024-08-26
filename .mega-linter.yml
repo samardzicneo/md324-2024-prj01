@@ -27,7 +27,7 @@ IGNORE_GENERATED_FILES: true
 
 IGNORE_GITIGNORED_FILES: true
 
-ADDITIONAL_EXCLUDED_DIRECTORIES: ['public', 'storage']
+ADDITIONAL_EXCLUDED_DIRECTORIES: ["public", "storage"]
 
 FILEIO_REPORTER: false
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass

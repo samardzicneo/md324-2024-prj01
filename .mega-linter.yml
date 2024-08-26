@@ -23,10 +23,11 @@ DISABLE:
   - PHP
   - SPELL
   - EDITORCONFIG
-  - CSS
   # - SPELL # Uncomment to disable checks of spelling mistakes
 
 SHOW_ELAPSED_TIME: true
+
+EXCLUDED_DIRECTORIES: ['public', 'storage']
 
 FILEIO_REPORTER: false
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass

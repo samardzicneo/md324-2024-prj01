@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
-use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ProjectResource extends Resource
 {
@@ -26,23 +23,23 @@ class ProjectResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required(),
                 Forms\Components\MarkdownEditor::make('description')
-                ->toolbarButtons([
-                    'blockquote',
-                    'bold',
-                    'bulletList',
-                    'codeBlock',
-                    'heading',
-                    'italic',
-                    'link',
-                    'orderedList',
-                    'redo',
-                    'strike',
-                    'table',
-                    'undo',
-                ])
-                ->columnSpanFull(),
+                    ->toolbarButtons([
+                        'blockquote',
+                        'bold',
+                        'bulletList',
+                        'codeBlock',
+                        'heading',
+                        'italic',
+                        'link',
+                        'orderedList',
+                        'redo',
+                        'strike',
+                        'table',
+                        'undo',
+                    ])
+                    ->columnSpanFull(),
                 Forms\Components\ColorPicker::make('color')->hex()
-                    ->required()
+                    ->required(),
             ]);
     }
 
@@ -54,7 +51,7 @@ class ProjectResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('user.name'),
                 Tables\Columns\ColorColumn::make('color')
-                    ->searchable()
+                    ->searchable(),
             ])
             ->filters([
                 //

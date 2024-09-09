@@ -1,0 +1,9 @@
+services:
+  app8:
+    build:
+      context: .
+      dockerfile: Professor.Dockerfile
+    volumes:
+      - .env:/app/.env
+    ports:
+      - "8080:80"

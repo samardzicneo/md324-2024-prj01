@@ -1,9 +1,10 @@
 services:
-  app8:
+  app:
     build:
       context: .
       dockerfile: Professor.Dockerfile
     volumes:
-      - .env:/app/.env
+      - .env:/var/www/html/.env
+#      - ./storage:/var/www/html/storage
     ports:
       - "8080:80"

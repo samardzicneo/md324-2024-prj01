@@ -66,8 +66,7 @@ jobs:
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
           context: .
-          #push: ${{ github.event_name != 'pull_request' }}
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}, ghcr.io/samardzicneo/md324-2024-prj01:luc-production
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
@@ -79,8 +78,7 @@ jobs:
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
           context: .
-          #push: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'EMVs-Luc' }}
-          push: true
+          push: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'EMVs-Luc' }}
           tags: ${{ steps.meta.outputs.tags }}, ghcr.io/samardzicneo/md324-2024-prj01:luc-staging
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha

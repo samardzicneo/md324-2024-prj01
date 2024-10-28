@@ -84,3 +84,11 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      - name: executing remote ssh commands using key
+        uses: appleboy/ssh-action@v1.1.0
+        with:         
+          host: srv02.md324.samaneo.ch
+          username: actions
+          key: ${{ secrets.ID_ACTIONS_SRV02 }}
+          script: sudo /opt/restart-docker-prod.sh
+          

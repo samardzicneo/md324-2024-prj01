@@ -89,6 +89,6 @@ jobs:
         with:         
           host: srv02.md324.samaneo.ch
           username: actions
-          key: ${{ secrets.ID_ACTIONS_SRV03 }}
+          key: ${{ secrets.ID_ACTIONS_SRV02 }}
           script: sudo /opt/restart-docker-prod.sh
           

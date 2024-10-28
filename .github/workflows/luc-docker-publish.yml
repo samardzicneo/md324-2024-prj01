@@ -85,9 +85,9 @@ jobs:
           cache-to: type=gha,mode=max
           
       - name: executing remote ssh commands using password
-            uses: appleboy/ssh-action@v1.1.0
-            with:
-              host: srv01.md324.samaneo.ch
-              username: actions
-              key: ${{secrets.ID_ACTIONS_SRV01}}
-              script: sudo /opt/restart-docker-prod.sh
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: srv01.md324.samaneo.ch
+          username: actions
+          key: ${{secrets.ID_ACTIONS_SRV01}}
+          script: sudo /opt/restart-docker-prod.sh
